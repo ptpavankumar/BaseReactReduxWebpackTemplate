@@ -4,9 +4,12 @@ import App from './components/App';
 import HomePage from './components/home/HomePage';
 import AboutPage from './components/about/AboutPage';
 
+import NotFound from './components/common/NotFound';
+
 export default (
   <Route path="/" component={App} >
     <IndexRoute component={HomePage} />
     <Route path="about" component={AboutPage} />
+    <Route path="*" component={NotFound} />
   </Route>
 );
