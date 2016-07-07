@@ -4,11 +4,11 @@ import path from 'path';
 export default {
     debug: true,
     devtool: 'cheap-module-eval-source-map',
-    noInfo: false, //webpack will/will-not display all files its bundling
+    noInfo: true, //webpack will/will-not display all files its bundling
     entry: [ //Order is important
         'eventsource-polyfill',
         'webpack-hot-middleware/client?reload=true',
-        './src/index'
+        './src/index.js'
     ],
     target: 'web',// Other options are node i.e. webpack is going to bundle that is compatible to ##node or ##web
     output: {
@@ -32,7 +32,7 @@ export default {
             {test: /\.svg(\?v=\d+.\d+.\d+)?$/, loader: 'file-loader?limit=10000&mimetype=image/svg+xml'}, //Bootstrap
             {test: /\.(jpe?g|png|gif)$/i, loaders: ['file']},
             {test: /\.ico$/, loader: 'file-loader?name=[name].[ext]'},
-            {test: /(\.css|\.scss)$/, loaders: ['style', 'css?sourceMap', 'sass?sourceMap']}
+            {test: /(\.css|\.scss)$/, loaders: [ 'style', 'css?sourceMap', 'sass?sourceMap']}
         ]
     }
 };
