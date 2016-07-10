@@ -1,6 +1,7 @@
 import React from 'react';
-import { connect } from 'react-redux';
+// import { connect } from 'react-redux';
 
+/* eslint react/prefer-stateless-function: 0 */
 class AboutPage extends React.Component {
   render() {
     return (
@@ -12,9 +13,9 @@ class AboutPage extends React.Component {
   }
 }
 
-const mapStateToProps = (state) => {
-  return {};
-};
+// const mapStateToProps = (state) => {
+//   return {};
+// };
 
-//export default connect(mapStateToProps)(AboutPage);
+// export default connect(mapStateToProps)(AboutPage);
 export default AboutPage;

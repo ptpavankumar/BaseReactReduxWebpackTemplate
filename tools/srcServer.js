@@ -12,16 +12,17 @@ const compiler = webpack(config);
 
 app.use(require('webpack-dev-middleware')(compiler, {
   noInfo: true,
-  publicPath: config.output.publicPath
+  publicPath: config.output.publicPath,
 }));
 
+// Instead of 'webpack-hot-middleware' use 'react-hot-loader'
 app.use(require('webpack-hot-middleware')(compiler));
 
-app.get('*', function(req, res) {
-  res.sendFile(path.join( __dirname, '../src/index.html'));
+app.get('*', (req, res) => {
+  res.sendFile(path.join(__dirname, '../src/index.html'));
 });
 
-app.listen(port, function(err) {
+app.listen(port, (err) => {
   if (err) {
     console.log(err);
   } else {

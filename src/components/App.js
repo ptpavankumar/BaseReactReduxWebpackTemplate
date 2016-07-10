@@ -1,6 +1,7 @@
-import React, {PropTypes} from 'react';
+import React, { PropTypes } from 'react';
 import Header from './common/Header';
 
+/* eslint react/prefer-stateless-function: 0 */
 class App extends React.Component {
   render() {
     return (
@@ -13,7 +14,7 @@ class App extends React.Component {
 }
 
 App.propTypes = {
-  children: PropTypes.object.isRequired
+  children: PropTypes.object.isRequired,
 };
 
 export default App;

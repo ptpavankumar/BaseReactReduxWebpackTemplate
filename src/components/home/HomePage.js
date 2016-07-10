@@ -1,7 +1,8 @@
 import React from 'react';
-import {Link} from 'react-router';
-import { connect } from 'react-redux';
+import { Link } from 'react-router';
+// import { connect } from 'react-redux';
 
+/* eslint react/prefer-stateless-function: 0 */
 class HomePage extends React.Component {
   render() {
     return (
@@ -14,9 +15,9 @@ class HomePage extends React.Component {
   }
 }
 
-const mapStateToProps = (state) => {
-  return {};
-};
+// const mapStateToProps = (state) => {
+//   return {};
+// };
 
-//export default connect(mapStateToProps)(HomePage);
+// export default connect(mapStateToProps)(HomePage);
 export default HomePage;

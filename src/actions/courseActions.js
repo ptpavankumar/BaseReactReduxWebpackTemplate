@@ -1,5 +1,5 @@
 export function createCourse(course) {
   return {
-    type: 'CREATE_COURSE', course
+    type: 'CREATE_COURSE', course,
   };
 }
